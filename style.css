@@ -279,6 +279,7 @@ label {
   color: rgb(36, 2, 131);
   color: #ffffff;
   margin-bottom: -35px;
+  letter-spacing: 2px; /* Ajuste o valor conforme necessário */
 }
  
 .nome,
