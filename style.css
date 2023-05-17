@@ -183,7 +183,22 @@ font-size: 16px;
   line-height: 3; /* Aumenta a altura da fonte */
   background-color: #333;
 }
+ .spotify  {
+ color: #ffffff;
+  width: 50%;
+  height: 30px;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  font-size: 40px;
+  margin-bottom: 20px;
+ }
 
+ .spotify > i {
+  margin-right: 20px;
+  cursor: pointer;
+ }
+ 
 .music {
   display: flex;
   flex-direction: column;
@@ -202,7 +217,10 @@ font-size: 16px;
 .music audio {
   margin-bottom: 10px;
   padding: 10px;
-}
+}  
+
+
+
 .siga-wrapper {
   display: flex;
   justify-content: center;
@@ -291,6 +309,12 @@ font-size: 16px;
     height: auto;
   }
 
+  .music audio {
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: auto;
+  }  
+
   .menu {
    display: none;
   }
@@ -351,6 +375,7 @@ font-size: 16px;
   .agenda {
     display: none;
   }
+  
 }
 @media (max-width: 900px) {
 .material-icons {
