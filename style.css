@@ -246,6 +246,12 @@ font-size: 16px;
   justify-content: flex-start;
 }
 
+.nomeMusica {
+ display: block;
+ margin: auto;
+ color: #b3b2b2;
+}
+
 .music .audio {
   align-self: flex-start;
   padding: 20px;
