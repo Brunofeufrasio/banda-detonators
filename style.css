@@ -219,6 +219,8 @@ font-size: 16px;
 .music audio {
   margin-bottom: 10px;
   padding: 10px;
+  display: block;
+  margin: auto;
 }  
 
 
@@ -250,12 +252,14 @@ font-size: 16px;
  display: block;
  margin: auto;
  color: #b3b2b2;
+ text-align: left;
 }
 
 .music .audio {
   align-self: flex-start;
   padding: 20px;
 }
+
 
 .title-contato {
   text-align: center;
@@ -277,8 +281,6 @@ font-size: 16px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  
-
 }
 
 label {
