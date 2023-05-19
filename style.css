@@ -345,7 +345,7 @@ label {
 .biografia {
   padding: 20px;
   color: #333;
-  max-height: 300px; /* Altura máxima inicial */
+  max-height: 350px; /* Altura máxima inicial */
   overflow: hidden;
   max-width: 900px;
   margin: auto;
