@@ -198,6 +198,17 @@ font-size: 16px;
   margin-bottom: 20px;
  }
 
+ .spotify  p {
+  font-size: 10px; /* Tamanho das palavras */
+}
+ 
+
+
+
+ .spotify > i:hover {
+ color: rgb(127, 154, 235);
+ }
+
  .spotify > i {
   margin-right: 20px;
   cursor: pointer;
