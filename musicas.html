@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header class="header-with-image">
-        <div class="nomeBanda"> <P>Detonators</P>
-            <span id="burger" class="material-icons"onclick="clickMenu()">menu</span>
+        <div class="nomeBanda">
+            <p>Detonators</p>
+            <span id="burger" class="material-icons" onclick="clickMenu()">menu</span>
         </div>
         <div id="itens" class="menu">
             <a href="index.html">INÍCIO</a>
@@ -36,35 +37,34 @@
                 </div>
                 <div class="audio">
                     <p class="nomeMusica">The Wors</p>
-                    <audio controls>
+                    <audio id="myAudio" class="song" controls>
                         <source src="music/music1.mp3" type="audio/mpeg">
                         Seu navegador não suporta a reprodução de áudio.
-                         <p class="nomeMusica"></p>
-                    </audio>
-                      <p class="nomeMusica">Freedom</p>
-                    <audio controls>
+                      </audio>
+                    <p class="nomeMusica">Freedom</p>
+                    <audio class="song" controls>
                         <source src="music/music2.mp3" type="audio/mpeg">
                         Seu navegador não suporta a reprodução de áudio.
                     </audio>
                     <p class="nomeMusica">Cryng</p>
-                    <audio controls>
+                    <audio class="song" controls>
                         <source src="music/music3.mp3" type="audio/mpeg">
                         Seu navegador não suporta a reprodução de áudio.
                     </audio>
                     <p class="nomeMusica">Rock Star</p>
-                    <audio controls>
+                    <audio class="song" controls>
                         <source src="music/music4.mp3" type="audio/mpeg">
                         Seu navegador não suporta a reprodução de áudio.
                     </audio>
                     <p class="nomeMusica">Sky Blue</p>
-                    <audio controls>
+                    <audio class="song" controls>
                         <source src="music/music5.mp3" type="audio/mpeg">
                         Seu navegador não suporta a reprodução de áudio.
                     </audio>
                 </div>
+            </div>
         </div>
     </main>
-    
 
     <div class="footer">
         <p>Acompanhe Detonators nas redes sociais e plataformas de streaming</p>
@@ -77,9 +77,45 @@
         </div>
         <footer class="copy"> &copy;By Bruno Eufrásio</footer>
     </div>
-    
-   <!-- Inclua a biblioteca Font Awesome -->
-<script src="https://kit.fontawesome.com/SEU_CODIGO.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
+
+    <!-- Inclua a biblioteca Font Awesome -->
+    <script src="https://kit.fontawesome.com/SEU_CODIGO.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        function clickMenu() {
+            if (window.innerWidth <= 900) {
+                var itens = document.getElementById("itens");
+                if (itens.style.display === 'block') {
+                    itens.style.display = 'none';
+                } else {
+                    itens.style.display = 'block';
+                }
+            }
+        }
+
+        function updateMenuOnResize() {
+            if (window.innerWidth > 900) {
+                window.location.reload(); // Recarrega a página
+            }
+        }
+
+        window.addEventListener('resize', updateMenuOnResize);
+
+        const songs = document.querySelectorAll(".song");
+
+        songs.forEach((song) => {
+            song.addEventListener("play", handlePlay);
+        });
+
+        function handlePlay(event) {
+            const currentSong = event.target;
+
+            songs.forEach((song) => {
+                if (song !== currentSong && !song.paused) {
+                    song.pause();
+                }
+            });
+        }
+    </script>
 </body>
 </html>
