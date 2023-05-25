@@ -324,6 +324,41 @@ label {
   border-radius: 5px;
 }
 
+.whatsapp {
+  background-color: green;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  top: 300px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.pwhatsapp {
+  font-size: 12px;
+  text-align: center;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 35px;
+  top: -170px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
 .botão {
   background-color: rgb(36, 2, 131);
   color: white;
@@ -473,6 +508,18 @@ label {
 
   .copy {
     margin-top: 5px;
+  }
+  .whatsapp {
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .pwhatsapp {
+    font-size: 10px;
+    right: 30px;
+    top: -225px;
+    
   }
 }
 
